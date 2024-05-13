@@ -8,11 +8,22 @@ function impostaPagina(pictures) {
     //Creazione Display
     const container = document.createElement("div");
     container.setAttribute("id", "container");
-    main.append(container);
     //Creazione immagini
     pictures.forEach(picture => {
         const image = document.createElement("img");
+        image.setAttribute("src", `./${picture.image}`);
+        const imageTitle = document.createElement("span");
+        imageTitle.setAttribute("id", "imgTitle");
+        imageTitle.innerText = picture.title;
+        const imageDescription = document.createElement("span");
+        imageDescription.setAttribute("id", "imgDescription");
+        imageDescription.innerText = picture.text;
+        image.append(imageTitle, imageDescription);
+        container.append(image);
     });
+    main.append(container);
+    //Attivazione prima immagine
+    document.querySelector("img").classList.add("displayedImg");
     //Creazione nav
     const nav = document.createElement("nav");
     nav.setAttribute("id", "slider");
@@ -25,14 +36,3 @@ function impostaPagina(pictures) {
     nav.append(previousBtn, nextBtn);
     main.append(nav);
 }
-
-
-/* <div id="container">
-            <img class="displayedImg" src="./img/01.webp" alt="">
-        </div>
-
-        <!-- Slider -->
-        <nav id="slider">
-            <button id="previousBtn">Previous</button>
-            <button id="nextBtn">Next</button>
-        </nav> */

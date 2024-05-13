@@ -20,8 +20,22 @@ HTML, header, main, footer {
     display:flex;
     justify-content: center;
 }
+img {
+    display: none;
+}
 .displayedImg {
     height: 80vh;
+    display: unset;
+}
+span {
+    border: 2px solid black;
+    border-radius: 1rem;
+}
+#imgTitle{
+    font-size: 2rem;
+}
+#imgTitle{
+    font-size: 1.2rem;
 }
 
 /* Navbar */
