@@ -38,3 +38,15 @@ function impostaPagina(pictures) {
     nav.append(previousBtn, nextBtn);
     main.append(nav);
 }
+
+//Scorrimento immagini
+function nextPic() {
+    const pics = document.getElementsByClassName("card");
+    pics[indiceImmagineAttiva].classList.remove("displayedCard");
+    pics[++indiceImmagineAttiva].classList.add("displayedCard");
+}
+function previousPic() {
+    const pics = document.getElementsByClassName("card");
+    pics[indiceImmagineAttiva].classList.remove("displayedCard");
+    pics[--indiceImmagineAttiva].classList.add("displayedCard");
+}

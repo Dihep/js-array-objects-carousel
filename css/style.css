@@ -22,6 +22,7 @@ HTML, header, main, footer {
 }
 img {
     height: 80vh;
+    object-fit: cover;
 }
 .displayedCard {
     display: flex;
@@ -36,7 +37,7 @@ span {
     width: 30%;
     text-align: center;
     background-color: black;
-    opacity: 40%;
+    opacity: 50%;
 }
 #imgTitle{
     font-size: 1.5rem;
