@@ -1,0 +1,29 @@
+/* Stili universali */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dark-mode */
+HTML, header, main, footer {
+    background-color: black;
+    color: white;
+}
+
+/* Stili main */
+.teamMember {
+    border: 1px white solid;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.attribute {
+    background-color: rgb(0, 0, 140);
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+    margin-right: 2rem;
+}
