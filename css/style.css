@@ -16,26 +16,35 @@ HTML, header, main, footer {
 #container {
     margin-top: 1rem;
     width: 100%;
-    height: 80vh;
-    display:flex;
-    justify-content: center;
 }
-img {
+.card {
     display: none;
 }
-.displayedImg {
+img {
     height: 80vh;
-    display: unset;
+}
+.displayedCard {
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
 span {
     border: 2px solid black;
     border-radius: 1rem;
+    position: absolute;
+    padding: 0.2rem;
+    width: 30%;
+    text-align: center;
+    background-color: black;
+    opacity: 40%;
 }
 #imgTitle{
-    font-size: 2rem;
+    font-size: 1.5rem;
+    top: 5%
 }
-#imgTitle{
-    font-size: 1.2rem;
+#imgDescription{
+    font-size: 0.8rem;
+    bottom: 10%
 }
 
 /* Navbar */

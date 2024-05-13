@@ -10,6 +10,8 @@ function impostaPagina(pictures) {
     container.setAttribute("id", "container");
     //Creazione immagini
     pictures.forEach(picture => {
+        const card = document.createElement("div");
+        card.setAttribute("class", "card");
         const image = document.createElement("img");
         image.setAttribute("src", `./${picture.image}`);
         const imageTitle = document.createElement("span");
@@ -18,12 +20,12 @@ function impostaPagina(pictures) {
         const imageDescription = document.createElement("span");
         imageDescription.setAttribute("id", "imgDescription");
         imageDescription.innerText = picture.text;
-        image.append(imageTitle, imageDescription);
-        container.append(image);
+        card.append(image, imageTitle, imageDescription);
+        container.append(card);
     });
     main.append(container);
     //Attivazione prima immagine
-    document.querySelector("img").classList.add("displayedImg");
+    document.querySelector(".card").classList.add("displayedCard");
     //Creazione nav
     const nav = document.createElement("nav");
     nav.setAttribute("id", "slider");
