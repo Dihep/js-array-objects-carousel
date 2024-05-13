@@ -43,10 +43,20 @@ function impostaPagina(pictures) {
 function nextPic() {
     const pics = document.getElementsByClassName("card");
     pics[indiceImmagineAttiva].classList.remove("displayedCard");
-    pics[++indiceImmagineAttiva].classList.add("displayedCard");
+    if (indiceImmagineAttiva == (numeroImmagini-1)) {
+        indiceImmagineAttiva = 0;
+    } else {
+        indiceImmagineAttiva++;
+    }
+    pics[indiceImmagineAttiva].classList.add("displayedCard");    
 }
 function previousPic() {
     const pics = document.getElementsByClassName("card");
     pics[indiceImmagineAttiva].classList.remove("displayedCard");
-    pics[--indiceImmagineAttiva].classList.add("displayedCard");
+    if (indiceImmagineAttiva == (0)) {
+        indiceImmagineAttiva = numeroImmagini-1;
+    } else {
+        indiceImmagineAttiva--;
+    }
+    pics[indiceImmagineAttiva].classList.add("displayedCard");
 }

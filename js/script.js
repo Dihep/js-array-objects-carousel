@@ -4,6 +4,7 @@ console.log(images, images[1].title); */
 
 //Impostazione variabili
 var indiceImmagineAttiva = 0;
+const numeroImmagini = images.length;
 
 //Script principale
 impostaPagina(images);
